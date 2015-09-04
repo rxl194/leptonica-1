@@ -1,7 +1,29 @@
 
+ubuntu:
+sudo apt-get install autoconf automake libtool
+sudo apt-get install libpng12-dev
+sudo apt-get install libjpeg62-dev
+sudo apt-get install libtiff4-dev
+sudo apt-get install zlib1g-dev
+sudo apt-get install libicu-dev      # (if you plan to make the training tools)
+sudo apt-get install libpango1.0-dev # (if you plan to make the training tools)
+sudo apt-get install libcairo2-dev   # (if you plan to make the training tools)
+
+#virtualbox
+sudo apt-get install linux-headers-$(uname -r)
+
+
 Fedora:
 	cd build
 	chmod a+x ../configure
 	../configure --prefix=/home/rdlin/local/leptonica
 	make
 	make install
+
+Build dependent lib on windows:
+zlib, libjpeg, libpng, libtiff:
+  cmake 3.3.0; 
+    need to copy the files failed to create symbolic link
+    in MSys, libpng16.a->libpng.a
+    
+  $ ../configure CC=C:/MinGW/bin/gcc.exe CXX=C:/MinGW/bin/g++.exe CFLAGS=-g3 -gdwarf-2 CXXFLAGS=-g3 -gdwarf-2 LDFLAGS=-L/d/git/share/lib --prefix=/d/git/share

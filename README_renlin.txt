@@ -19,6 +19,11 @@ Fedora:
 	../configure --prefix=/home/rdlin/local/leptonica
 	make
 	make install
+	
+Ubuntu:
+       LDFLAGS="-Wl,-rpath -Wl,/opt/leptonica-1.71/lib" ../configure --prefix=/opt/leptonica-1.71
+       sudo make install
+       sudo ldconfig
 
 Build dependent lib on windows:
 zlib, libjpeg, libpng, libtiff:

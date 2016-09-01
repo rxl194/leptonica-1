@@ -32,3 +32,10 @@ zlib, libjpeg, libpng, libtiff:
     in MSys, libpng16.a->libpng.a
     
   $ ../configure CC=C:/MinGW/bin/gcc.exe CXX=C:/MinGW/bin/g++.exe CFLAGS=-g3 -gdwarf-2 CXXFLAGS=-g3 -gdwarf-2 LDFLAGS=-L/d/git/share/lib --prefix=/d/git/share
+
++Windows: MINGW+OCV3.1.0:
++ $ Start netbean -> Create New Project from existing source
++ $ CC=${IDE_CC} CXX=${IDE_CXX} CFLAGS="-g3 -gdwarf-2" CXXFLAGS="-g3 -gdwarf-2" \
++    LDFLAGS=-L/c/opt/ocv3.1.0/x86/mingw/lib --prefix=/c/opt/leptonica-1.71
++ $ NB-project setting when created: double check "include/lib" files
+
